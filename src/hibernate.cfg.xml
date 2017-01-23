@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8'?><!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- Database connection information-->
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/hibernatetest</property>
+        <property name="connection.username">augie</property>
+        <property name="connection.password">Augie1.0</property>
+        <property name="connection.pool_size">10</property>
+
+        <!-- SQL dialect -->
+        <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+
+        <!-- Drop and recreate the database schema on startup -->
+        <property name="hbm2ddl.auto">update</property>
+
+        <property name="show_sql">true</property>
+        <property name="format_sql">true</property>
+
+        <!-- Names of the annotated entity class-->
+        <mapping class="com.bitcointrade.bo.User"/>
+        <mapping class="com.bitcointrade.bo.UserAddress"/>
+        <mapping class="com.bitcointrade.bo.BTCAccount"/>
+        <mapping class="com.bitcointrade.bo.NXTAccount"/>
+        <mapping class="com.bitcointrade.bo.BTCTransaction"/>
+        <mapping class="com.bitcointrade.bo.NXTTransaction"/>
+        <mapping class="com.bitcointrade.bo.SignupInfo"/>
+        <mapping class="com.bitcointrade.bo.Exchange"/>
+        <mapping class="com.bitcointrade.bo.OrderAudit"/>
+        <mapping class="com.bitcointrade.bo.Order"/>
+		<mapping class="com.bitcointrade.bo.BarData"/>
+
+
+    </session-factory>
+</hibernate-configuration>
+
